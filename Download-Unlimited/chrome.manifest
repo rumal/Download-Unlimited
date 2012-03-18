@@ -1,0 +1,4 @@
+content   download_unlimited                 chrome/content/
+skin      download_unlimited   classic/1.0   chrome/skin/
+locale    download_unlimited   en-US         chrome/locale/en-US/
+overlay	chrome://browser/content/browser.xul	chrome://download_unlimited/content/ff-overlay.xul
