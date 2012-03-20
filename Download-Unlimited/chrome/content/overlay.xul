@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://download_unlimited/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://download_unlimited/locale/overlay.dtd">
+<overlay id="download_unlimited-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="overlay.js"/>
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="download_unlimited-strings" src="chrome://download_unlimited/locale/overlay.properties"/>
+  </stringbundleset>
+  <statusbar id="status-bar">
+   <statusbarpanel id="download_unlimited-barpanel"
+	 image="chrome://download_unlimited/skin/off.png"
+     label="&download_unlimitedContext.download_unlimited;"
+     class="statusbarpanel-iconic" 
+	 tooltiptext="&download_unlimitedToolbarButton.tooltip;"
+	 onclick="download_unlimited.onMenuItemCommand(event);"
+   />
+ </statusbar>
+	<menupopup id="menu_ToolsPopup">
+	  <menu id="download_unlimited-menu" label="&download_unlimitedMenu.name;">
+		<menupopup id="menu_detailsflvdwn">
+			<menuitem id="download_unlimited-activate" label="Activate" 
+				  oncommand="download_unlimited.onMenuItemCommand(event);"/>
+		</menupopup>
+	  </menu>
+	</menupopup>
+</overlay>

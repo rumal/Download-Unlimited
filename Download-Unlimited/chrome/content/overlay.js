@@ -22,9 +22,7 @@ myFunction_unreg : function (){
 		var MyMenu = document.getElementById("download_unlimited-activate");
 		MyMenu.label = "Activate"; 
 		download_unlimited.popup("unloaded");
-		//Firebug.Console.log("unload");
 		var observerService = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
-		//observerService.addObserver(myObserver, "http-on-examine-response", false);
 		try{
 			observerService.removeObserver(download_unlimited.myObserver, "http-on-modify-request");
 		}catch(e){}
@@ -67,34 +65,26 @@ onMenuItemCommand: function(e) {
 	},
 
 onToolbarButtonCommand: function(e) {
-		// just reuse the function above.  you can change this, obviously!
+		// just reusing the function above.
 		download_unlimited.onMenuItemCommand(e);
 	},
 	myObserver : {
 observe: function(aSubject, aTopic, aData){			  				
 			var httpChannel = aSubject.QueryInterface(Components.interfaces.nsIHttpChannel);
-			//Firebug.Console.log(httpChannel);
 			try{
-				//Firebug.Console.log(httpChannel);
 				// if the range header is set by the downloadThemAll 
 				var range = httpChannel.getRequestHeader('Range');
-				//Firebug.Console.log(range);
 				lowRange = range.substring(6,range.length-1);
 				var upRange = parseInt(lowRange) + download_unlimited.step;
 				//change it to the allowed range
 				httpChannel.setRequestHeader('Range','bytes='+lowRange+'-'+upRange,false);
 				range = httpChannel.getRequestHeader('Range');
-				//Firebug.Console.log(range);
 			}catch(e){
 				//if the range header is not set(normal trafic or data on the page)
 				// since they also need to be limited to bypass the limit
 				httpChannel.setRequestHeader('Range','bytes=0-'+ download_unlimited.step,false);
 				// this may trucate large files but it will be allowed to be downloaded from the addon
 			}
-			//Firebug.Console.log(httpChannel);
-			//Firebug.Console.log("end");
-			
-			
 		},
 
 QueryInterface: function(iid){

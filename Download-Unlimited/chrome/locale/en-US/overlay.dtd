@@ -1,8 +1,4 @@
-<!ENTITY download_unlimited.label "Your localized menuitem">
-<!ENTITY download_unlimitedContext.label "Your Menuitem">
 <!ENTITY download_unlimitedContext.accesskey "Y">
-<!ENTITY download_unlimitedToolbarButton.label "Your Toolbar Button">
-<!ENTITY download_unlimitedToolbarButton.tooltip "This is your toolbar button!">
-<!ENTITY download_unlimitedSidebar.label "Your Sidebar">
-<!ENTITY download_unlimitedToolbar.name  "example">
-<!ENTITY download_unlimitedToolbar.label "This is an example toolbar. You can hide it under View &gt; toolbars &gt; &download_unlimitedToolbar.name;">
+<!ENTITY download_unlimitedContext.download_unlimited "Download Unlimited">
+<!ENTITY download_unlimitedToolbarButton.tooltip "Download Unlimited">
+<!ENTITY download_unlimitedMenu.name "Download Unlimited">
