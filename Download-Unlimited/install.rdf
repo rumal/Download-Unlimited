@@ -4,7 +4,7 @@
     <Description about="urn:mozilla:install-manifest">
         <em:type>2</em:type> <!-- 2 : Extension -->
         <em:id>downloadunlimited@ideawide.com</em:id>
-        <em:version>1.0</em:version>
+        <em:version>1.001</em:version>
         <em:name>Download Unlimited</em:name>
         <em:description>This will remove all the restriction and the limits you have in the networks when downloading files.</em:description>
         <em:creator>Pasindu Perera</em:creator>
@@ -16,7 +16,7 @@
                 <!-- Firefox -->
                 <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
                 <em:minVersion>3.5</em:minVersion>
-                <em:maxVersion>10.0a1</em:maxVersion>
+                <em:maxVersion>11.0a1</em:maxVersion>
             </Description>
         </em:targetApplication>
     </Description>
